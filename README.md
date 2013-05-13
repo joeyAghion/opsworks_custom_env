@@ -23,7 +23,7 @@ Configuration values are specified in the [stack's custom JSON](http://docs.aws.
       
       "deploy": {
         "my_app": {
-          "sylink_before_migrate": {
+          "symlink_before_migrate": {
             "config/application.yml": "config/application.yml"
           }
         }
