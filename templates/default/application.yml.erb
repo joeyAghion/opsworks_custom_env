@@ -2,5 +2,5 @@
 # stack's custom JSON and executing the opsworks_custom_env::update recipe.
 
 <% @env.sort.each do |key, val| %>
-<%= key.to_s %>: <%= val.to_s.inspect %>
+<%= key.to_s %>: <%= (val && val.to_s.inspect) %>
 <% end %>
