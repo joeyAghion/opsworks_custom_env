@@ -42,4 +42,6 @@ At the moment, only Unicorn/Nginx-style Rails apps are supported.
 Opsworks Set-Up
 ---------------
 
-The `opsworks_custom_env::configure` recipe should be added as a custom recipe to the _Deploy_ event. It executes a _restart Rails app APPNAME_ resource when the settings have changed, so ensure that this is defined. (In a typical rails layer, this is provided by the `rails::configure` recipe.)
+The `opsworks_custom_env::deploy` recipe should be added as a custom recipe to the _Deploy_ event.
+
+However, a deploy isn't necessary if you just want to update the custom configuration. Instead, update the stack's custom JSON, then choose to _Run Command_ > _execute recipes_ and enter `opsworks_custom_env::update` into the _Recipes to execute_ field. Executing the recipe will write an updated `application.yml` file and restart unicorn workers.
