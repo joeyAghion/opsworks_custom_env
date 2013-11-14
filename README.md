@@ -47,3 +47,9 @@ Opsworks Set-Up
 * Associate the `opsworks_custom_env::configure` custom recipe with the _Deploy_ event in your rails app's layer.
 
 A deploy isn't necessary if you just want to update the custom configuration. Instead, update the stack's custom JSON, then choose to _Run Command_ > _execute recipes_ and enter `opsworks_custom_env::configure` into the _Recipes to execute_ field. Executing the recipe will write an updated `application.yml` file and restart unicorn workers.
+
+Copyright and License
+-------
+
+(c) 2013 [Joey Aghion](http://joey.aghion.com), [Artsy](http://artsy.net). See [LICENSE](LICENSE) for details.
+
