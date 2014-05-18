@@ -23,7 +23,6 @@ Configuration values are specified in the [stack's custom JSON](http://docs.aws.
       
       "deploy": {
         "my_app": {
-          "deploy_to": "/srv/www/my_app",
           "symlink_before_migrate": {
             "config/application.yml": "config/application.yml"
           }
@@ -31,7 +30,7 @@ Configuration values are specified in the [stack's custom JSON](http://docs.aws.
       }
     }
 
-**Note** that the `symlink_before_migrate` attribute is necessary so that OpsWorks automatically symlinks the shared file when setting up release directories or deploying a new version. The `deploy_to` attribute is usually provided by OpsWorks, but re-including it in the custom JSON allows the recipe to be run outside of OpsWorks events.
+**Note** that the `symlink_before_migrate` attribute is necessary so that OpsWorks automatically symlinks the shared file when setting up release directories or deploying a new version.
 
 
 Caveats
@@ -51,5 +50,5 @@ A deploy isn't necessary if you just want to update the custom configuration. In
 Copyright and License
 -------
 
-(c) 2013 [Joey Aghion](http://joey.aghion.com), [Artsy](http://artsy.net). See [LICENSE](LICENSE) for details.
+(c) 2013-2014 [Joey Aghion](http://joey.aghion.com), [Artsy](http://artsy.net). See [LICENSE](LICENSE) for details.
 
