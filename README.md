@@ -36,7 +36,7 @@ Configuration values are specified in the [stack's custom JSON](http://docs.aws.
 Caveats
 -------
 
-At the moment, only Unicorn/Nginx-style Rails apps are supported.
+At the moment, only default Opsworks configurations for Apache/Passenger and Unicorn/Nginx style Rails apps are supported.
 
 
 Opsworks Set-Up
